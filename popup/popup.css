@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #fff;
+  background-color: #0f172aff;
+  background-image: url(/assets/images/bg.jpg);
+  background-position: center center;
+  background-size: contain;
+}
+
+header {
+  display: flex;
+  background-color: #0f172aff;
+  align-items: center;
+  padding: 16px 32px;
+  border-bottom: solid 1px rgb(248 250 252/0.06);
+  min-width: 400px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  display: flex;
+  height: 40px;
+  margin-right: 24px;
+}
+
+.logo > img {
+  height: 100%;
+}
+
+.title {
+  font-size: 21px;
+  margin: 0;
+}
+
+main {
+  padding: 12px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  outline: none;
+  margin: 10px;
+  border: none;
+  border-radius: 6px;
+  line-height: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 16px 32px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px 0 black;
+  background: #0284c7;
+  color: #fff;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.btn svg {
+  margin-right: 8px;
+}
+
+.btn-primary {
+  background: #0284c7;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0c4a6e;
+}
+
+.btn-secondary {
+  background: #dc2626;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background: #991b1b;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 16px 32px;
+}
+
+.social-link {
+  color: #ccc;
+  margin: 0 16px;
+  transition: all 0.2s;
+}
+.social-link:hover {
+  color: white;
+}
+
+@keyframes copy {
+  0%,
+  100% {
+    background: transparent;
+  }
+  50% {
+    background: #50a74d;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(1turn);
+  }
+}
+
+:root {
+  --dark-color: rgb(17, 26, 108);
+  --dark-color-hover: rgba(2, 7, 52, 0.7);
+  --light-color: #ffffff;
+}
+
+.nn-button {
+  background-color: transparent;
+  color: var(--light-color);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 40px;
+}
+
+.nn-button:hover {
+  background-color: var(--dark-color);
+}
+
+.nn-button-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.nn-choices-popup,
+.nn-settings-popup {
+  /* position: absolute; */
+  /* background: var(--dark-color); */
+  border-radius: 6px;
+  padding: 10px 0px;
+  width: 400px;
+  right: 0;
+  top: 40px;
+}
+
+.nn-choices-popup,
+.nn-settings-popup,
+.nn-choices-popup > * {
+  color: var(--light-color);
+}
+
+.nn-choices-popup > p,
+.nn-settings-popup > p {
+  padding: 3px 7px;
+  cursor: copy;
+}
+
+.nn-choices-popup > p.copied,
+.nn-settings-popup > p.copied {
+  animation: copy 0.5s linear;
+}
+
+.nn-inactive-popup {
+  display: none;
+  opacity: 0;
+}
+
+.nn-popup-close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 20px;
+  color: var(--light-color);
+}
+
+.nn-popup-settings-button,
+.nn-popup-comment-button {
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  font-size: 20px;
+  color: var(--light-color);
+}
+
+.nn-popup-close-button:hover,
+.nn-popup-settings-button:hover,
+.nn-popup-comment-button:hover,
+.nn-popup-regenerate-button:hover {
+  color: #8e0c46;
+}
+
+.nn-loader {
+  display: flex;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: solid 3px var(--light-color);
+  border-bottom-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+.nn-popup-header-container {
+  display: flex;
+  padding: 3px 5px 1px 5px;
+  align-items: center;
+}
+
+.nn-choice-element-active {
+  display: block;
+}
+
+.nn-choice-element-inactive {
+  display: none;
+}
+
+.nn-settings-popup {
+  padding: 10px;
+  display: flex;
+}
+
+.nn-temperature-slider-label,
+.nn-length-dropdown-label,
+.nn-style-dropdown-label {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.2em;
+  font-weight: semi-bold;
+  color: var(--light-color);
+}
+
+.nn-dropdown-box {
+  display: flex;
+}
+
+.nn-temperature-slider,
+.nn-temperature-slider:focus,
+.nn-temperature-slider:active {
+  border: none;
+  outline: none;
+}
+
+.nn-popup-apply-button:hover {
+  background-color: #a3fba2;
+}
+
+/* Save settings button, display shadow on hover */
+.nn-apply-button-box {
+  margin-left: auto;
+  align-self: flex-end;
+}
+
+.nn-apply-button {
+  background-color: #a3fba2;
+  color: #000;
+  border: 2px solid #2d2c2c;
+  box-shadow: inset 0px 0px 0px 4px #a3a3a324;
+  border-radius: 4px;
+  padding: 3px 20px;
+  font-size: 16px;
+  margin-left: 3px;
+  margin-right: 3px;
+  cursor: pointer;
+}
+
+.nn-apply-button:hover {
+  background-color: #a3fba2;
+  box-shadow: inset 0px 0px 0px 4px #a3a3a324;
+}

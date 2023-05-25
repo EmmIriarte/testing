@@ -1,0 +1,149 @@
+@keyframes copy {
+  0%,
+  100% {
+    background: transparent;
+  }
+  50% {
+    background: #50a74d;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(1turn);
+  }
+}
+
+:root {
+  --dark-color: rgb(17, 26, 108);
+  --dark-color-hover: rgba(2, 7, 52, 0.7);
+  --light-color: #ffffff;
+}
+
+.nn-button {
+  background-color: transparent;
+  color: var(--light-color);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 40px;
+}
+
+.nn-button:hover {
+  background-color: var(--dark-color);
+}
+
+.nn-button-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.nn-choices-popup,
+.nn-settings-popup {
+  z-index: 9999;
+  position: absolute;
+  background: var(--dark-color);
+  border-radius: 6px;
+  padding: 10px 0px;
+  width: 400px;
+  right: 0;
+  top: 40px;
+}
+
+.nn-choices-popup,
+.nn-settings-popup,
+.nn-choices-popup > * {
+  color: var(--light-color);
+}
+
+.nn-choices-popup > p,
+.nn-settings-popup > p {
+  padding: 3px 7px;
+  cursor: copy;
+}
+
+.nn-choices-popup > p.copied,
+.nn-settings-popup > p.copied {
+  animation: copy 0.5s linear;
+}
+
+.nn-inactive-popup {
+  display: none;
+  opacity: 0;
+}
+
+.nn-popup-close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 20px;
+  color: var(--light-color);
+}
+
+.nn-popup-settings-button,
+.nn-popup-comment-button {
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  font-size: 20px;
+  color: var(--light-color);
+}
+
+.nn-popup-close-button:hover,
+.nn-popup-settings-button:hover,
+.nn-popup-comment-button:hover,
+.nn-popup-regenerate-button:hover {
+  color: #8e0c46;
+}
+
+.nn-loader {
+  display: flex;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: solid 3px var(--light-color);
+  border-bottom-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+.nn-popup-header-container {
+  display: flex;
+  padding: 3px 5px 1px 5px;
+  align-items: center;
+}
+
+.nn-choice-header,
+.nn-popup-apply-button {
+  cursor: pointer;
+  padding: 3px 20px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+  padding: 3px 20px;
+  font-size: 16px;
+  border: 2px solid #2d2c2c;
+  color: #000;
+  margin-left: 3px;
+  margin-right: 3px;
+  background: #c3fbc2;
+  box-shadow: inset 0px 0px 0px 4px #a3a3a324;
+  border-radius: 4px;
+}
+
+.nn-choice-element-active {
+  display: block;
+}
+
+.nn-popup-regenerate-button {
+  position: absolute;
+  top: 5px;
+  right: 30px;
+  font-size: 20px;
+  color: var(--light-color);
+}
