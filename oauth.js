@@ -10,7 +10,7 @@ window.onload = function() {
           },
           'contentType': 'json'
         };
-        fetch('https://your-api-url-here', init)
+        fetch('https://www.googleapis.com/oauth2/v1/userinfo', init)
           .then((response) => response.json())
           .then(function(data) {
             console.log(data);
@@ -18,4 +18,5 @@ window.onload = function() {
       });
     });
   };
+  
   
